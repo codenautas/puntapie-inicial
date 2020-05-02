@@ -1,0 +1,3 @@
+{
+    "extends": "./src/unlogged/tsconfig.json"
+}

@@ -1,0 +1,18 @@
+server:
+  port: 3000
+  base-url: /puntapie_inicial
+db:
+  description: base de prueba
+  host: localhost
+  port: 5432
+  database: puntapie_inicial_db
+  schema: puntapie_inicial
+  user: puntapie_inicial_owner
+  password: cambiar_esta_clave
+client-setup: 
+  lang: es
+devel:
+  delay: 0
+log:
+  db:
+    on-demand: true

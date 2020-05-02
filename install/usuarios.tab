@@ -1,0 +1,5 @@
+usuario|apellido|md5clave|rol|activo
+perry|White|b1bbb825ea17742c70e1d84907d6d206|admin|true
+jimmi|Olsen|23577cd0a3d01348f1b5b110d4b105a6|redactor|true
+lois|Lane|2ed60af98b908e11470f6fd9445d3cb4|redactor|true
+clark|Kent|e84f5fc7c02ce9a113627e14dd45fe8f|redactor|true

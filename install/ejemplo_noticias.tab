@@ -1,0 +1,27 @@
+-
+  url: esta
+  titulo: Puntapié inicial para desarrollar una app backend-plus desde cero
+  texto: >
+    Por fin se publicó un ejemplo desde cero para empezar una aplicación backend-plus.
+    Si bien por ahora parece que faltara mucho, 
+    tiene todos los elementos necesarios para que sea útil.
+  fecha: 2020-05-02
+  formato: plano
+  redactor: lois
+  publicar: true
+-
+  url: node.jsV14
+  titulo: Salió la versión 14 de Node.js
+  texto: >
+    La nueva versión 14 de Node.js se publicó según el cronograma anunciado. 
+    ¿Qué tiene de nuevo respecto a la última versión 13? 
+    Nada, solo que esta ahora es LTS.
+
+    Así que si no estuviste usando la versión 13 ahora hay que leer la lista completa 
+    de las actualizaciones de la 13 para enterarse qué tiene de nuevo la 14 (respecto a la 12).
+  fecha: 2020-04-28
+  formato: plano
+  redactor: lois
+  publicar: true
+
+    
