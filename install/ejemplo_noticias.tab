@@ -1,4 +1,14 @@
 -
+  url: bp_policies
+  titulo: Backend-plus ahora maneja policies
+  texto: >
+    Ahora se pueden usar policies de postgresql en las tablas generadas por backendplus. 
+    Además consigue indicar en el front-end que un registro no es actualizable cuando no cumple la política "update using"
+  fecha: 2020-05-25
+  formato: plano
+  redactor: clark
+  publicar: false
+-
   url: esta
   titulo: Puntapié inicial para desarrollar una app backend-plus desde cero
   texto: >

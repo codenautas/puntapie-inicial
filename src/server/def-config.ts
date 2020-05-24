@@ -7,7 +7,7 @@ db:
   host: localhost
   database: puntapie_inicial_db
   schema: puntapie_inicial
-  user: puntapie_inicial_owner
+  user: puntapie_inicial_admin
 login:
   table: usuarios
   userFieldName: usuario
@@ -28,6 +28,8 @@ client-setup:
   user-scalable: no
 install:
   dump:
+    db:
+      owner: puntapie_inicial_owner
     scripts:
       post-adapt: []
 logo: 

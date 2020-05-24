@@ -39,6 +39,10 @@ No pueden ver las noticias de otros redactores hasta que no estén publicadas.
 Las tablas y procedimientos de ejemplo hay que borrarlo para empezar con la aplicación limpia. 
 Simplemente hay que buscar la palabra ejemplo en el código fuente (y en los nombres de los archivos) para elimianarlo. 
 
+### remplazos
+
+Usando VSCode se pueden usar expresionres regulares (case sensitive) para busacar `puntapie([-_]?)inicial` y reemplazar por `nueva$1app`. Y luego `Puntapie([-_]?)Inicial` y reemplazar por `Nueva$1App`. 
+
 ## documentación
 
 Está en [github](https://github.com/codenautas/backend-plus/blob/master/LEEME.md)
