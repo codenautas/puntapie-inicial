@@ -7,8 +7,12 @@ db:
   port: 5432
   database: puntapie_inicial_db
   schema: puntapie_inicial
-  user: puntapie_inicial_owner
+  user: puntapie_inicial_admin
   password: cambiar_esta_clave
+install:
+  dump:
+    db:
+      owner: puntapie_inicial_owner
 client-setup: 
   lang: es
 devel:

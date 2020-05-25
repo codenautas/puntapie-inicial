@@ -2,9 +2,12 @@
 
 import {TableDefinition, TableContext} from "./types-puntapie-inicial";
 
+import { getPolicies } from "./table-ejemplo_noticias";
+
 export function ejemplo_vinculos(context:TableContext):TableDefinition{
     var admin = context.user.rol==='admin';
     var redactor = context.user.rol==='redactor';
+    var pol = getPolicies(context.be);
     return {
         name:'ejemplo_vinculos',
         elementName:'vínculo', 
@@ -22,6 +25,12 @@ export function ejemplo_vinculos(context:TableContext):TableDefinition{
         constraints:[
             {constraintType:'unique', fields:['url','vinculo']}
         ],
+        sql:{
+            policies:{
+                all:{using:`(SELECT ${pol.all.using} FROM ejemplo_noticias WHERE url = ejemplo_vinculos.url)`},
+                select:{using:`(SELECT ${pol.select.using} FROM ejemplo_noticias WHERE url = ejemplo_vinculos.url)`}
+            }
+        },
         sortColumns:[{column:'url', order:1},{column:'orden', order:1}]
     };
 }

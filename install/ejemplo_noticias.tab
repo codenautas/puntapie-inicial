@@ -1,4 +1,14 @@
 -
+  url: postgres13beta1
+  titulo: Salió la versión Beta de postgres 13
+  texto: >
+    No hay cambios en el lenguaje. Los cambios principales son de seguridad, performance y replicación. 
+    Nada que afecte a Backend-plus
+  fecha: 2020-05-21
+  formato: plano
+  redactor: lois
+  publicar: false
+-
   url: bp_policies
   titulo: Backend-plus ahora maneja policies
   texto: >

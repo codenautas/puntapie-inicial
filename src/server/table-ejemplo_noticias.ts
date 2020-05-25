@@ -1,13 +1,18 @@
 "use strict";
 
-import {TableDefinition, TableContext} from "./types-puntapie-inicial";
+import {TableDefinition, TableContext, AppBackend} from "./types-puntapie-inicial";
+
+export function getPolicies(be:AppBackend){
+    return {
+        select:{ using: `${be.dbUserRolExpr} = 'admin' or redactor = ${be.dbUserNameExpr} or publicar`},
+        all:{ using: `${be.dbUserRolExpr} = 'admin' or redactor = ${be.dbUserNameExpr} and publicar is not true` }
+    }
+}
 
 export function ejemplo_noticias(context:TableContext):TableDefinition{
     var be = context.be;
     var admin = context.user.rol==='admin';
     var redactor = context.user.rol==='redactor';
-    var polSelect = `${be.dbUserRolExpr} = 'admin' or redactor = ${be.dbUserNameExpr} or publicar`;
-    var polEdit = `${be.dbUserRolExpr} = 'admin' or redactor = ${be.dbUserNameExpr} and publicar is not true`;
     return {
         name:'ejemplo_noticias',
         elementName:'noticia', 
@@ -35,10 +40,7 @@ export function ejemplo_noticias(context:TableContext):TableDefinition{
         ],
         sql:{
             // where:admin || context.forDump?'true':`(redactor = ${context.be.db.quoteNullable(context.user.usuario)} OR publicar)`,
-            policies:{
-                all:{using:polEdit},
-                select:{using:polSelect}
-            }
+            policies:getPolicies(be)
         }
     };
 }
