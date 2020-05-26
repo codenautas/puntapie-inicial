@@ -39,7 +39,16 @@ export function ejemplo_noticias(context:TableContext):TableDefinition{
             {table:'ejemplo_vinculos', fields:['url'], abr:'V'}
         ],
         sql:{
-            // where:admin || context.forDump?'true':`(redactor = ${context.be.db.quoteNullable(context.user.usuario)} OR publicar)`,
+            /* 
+               ATENCIÓN
+               --------
+               Las pólicies son algo nuevo en backend-plus, utilizan las policies de PostgreSQL: https://www.postgresql.org/docs/9.5/ddl-rowsecurity.html
+               Permiten cambiar los permisos en función del contenido de cada registro.
+
+               Como son nuevas es complicado de usarlas, hay que definir todo a mano.
+               Más adelante la forma de hacer esto puede cambiar o pueden haber herramientas que lo hagan más simple.
+               
+            */
             policies:getPolicies(be)
         }
     };
