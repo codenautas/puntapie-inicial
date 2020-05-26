@@ -4,6 +4,14 @@ Puntapié inicial para hacer una aplicación en backend-plus desde cero
 
 # iniciar una aplicación nueva
 
+## requisitos para arrancar
+
+Tener instalado:
+   1. git (para windows [git-scm](https://git-scm.com/) y [TortoiseGit](https://tortoisegit.org/))
+   2. [PostgreSQL](https://www.postgresql.org/) versión 12 como mínimo
+   3. [nodejs](https://nodejs.org/es/) versión 14
+   4. [Visual Studio Code](https://code.visualstudio.com/)
+
 ## arrancar con la cáscara
 
 Hay que bajar este repositorio (sin clonar ni hacer branch) en una carpeta de un repositorio nuevo. 
@@ -20,7 +28,7 @@ Copiar el archivo `example-local-config.yaml` en `local-config.yaml`.
 npm install
 npm start -- --dump-db
 ```
-Eso generará dos archivos de dump para crear la base de datos vacía y para crear las tablas en postgres
+Eso generará dos archivos de dump para crear la base de datos vacía y para crear las tablas en postgres.
 
 ```sh
 npm start
