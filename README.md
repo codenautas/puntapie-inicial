@@ -14,13 +14,36 @@ Tener instalado:
 
 ## arrancar con la cáscara
 
-Hay que bajar este repositorio (sin clonar ni hacer branch) en una carpeta de un repositorio nuevo. 
+Elegir un nombre para el sistema (por ejemplo "nueva app"). 
 
-Elegir un nombre (por ejemplo "nueva app") y cambiar todas las ocurrencias de puntapie inicial por nueva app, 
-respetando los guiones y rayas (- ó _) y las mayúsculas y minúsculas. 
+Si se va a usar el git como repositorio (github, gitlab o lo que sea),
+crear el repositorio y clonarlo en una carpeta. 
+Si no generar una carpeta en blanco (o del repositorio que sea).
+
+Bajar el `puntapie-inicial` (sin clonar ni hacer branch) en la carpeta del sistema nuevo. 
+
+[![code download zip](code-download.png)](https://github.com/codenautas/puntapie-inicial/archive/refs/heads/master.zip)
+
+
+Cambiar todas las ocurrencias de puntapie inicial por nueva app, 
+respetando los guiones y rayas (- ó _) y las mayúsculas y minúsculas
+(cómo dice en la sección [reemplazos](#reemplazos)). 
 Eso debe hacerse tanto dentro de los archivos como en los nombres de los mismos. 
 
-Copiar el archivo `example-local-config.yaml` en `local-config.yaml`.
+Copiar el archivo `example-local-config.yaml` en `local-config.yaml` 
+y cambiar los parámetros necesarios (url, puertos, etc) .
+
+## personalizarla
+
+Los elementos para personalizarla son:
+   1. El ícono de desarrollo 🏗 que está en `.vscode/settings.json "window-title"` 
+   por cualquier otro [UNICODE](amp-what.com)
+   2. La licencia (la que viene predeterminada es MIT) en el `package.json`
+   3. El nombre y título de la aplicación en `package.json` y el `README.MD`
+   4. La gráfica en las carpetas `img` y `css` dentro de `src/unlogged` y `src/client` 
+   5. Los usuarios inicials de prueba en `install/usuarios.tab`
+   6. Las tablas de ejemplo hay que quitarla y agregar las necesarias 
+   (archivos y objetos cuyo nombre contiene la palabra `ejemplo`)
 
 ## instalarla
 
@@ -49,7 +72,7 @@ Simplemente hay que buscar la palabra ejemplo en el código fuente (y en los nom
 
 ### remplazos
 
-Usando VSCode se pueden usar expresionres regulares (case sensitive) para busacar `puntapie([-_]?)inicial` y reemplazar por `nueva$1app`. Y luego `Puntapie([-_]?)Inicial` y reemplazar por `Nueva$1App`. 
+Usando VSCode se pueden usar *expresionres regulares* (case sensitive) para busacar `puntapie([-_]?)inicial` y reemplazar por `nueva$1app`. Y luego `Puntapie([-_]?)Inicial` y reemplazar por `Nueva$1App`. 
 
 ## documentación
 

@@ -15,6 +15,7 @@ login:
   rolFieldName: rol
   infoFieldList: [usuario, rol]
   activeClausule: activo
+  unloggedLandPage: false
   plus:
     allowHttpLogin: true
     fileStore: true

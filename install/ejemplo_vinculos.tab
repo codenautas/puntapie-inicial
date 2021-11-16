@@ -1,4 +1,7 @@
 url|orden|vinculo
+postgres14|1|https://www.postgresql.org/about/news/postgresql-141-135-129-1114-1019-and-9624-released-2349/
+postgres14|2|https://www.postgresql.org/docs/14/datatype-json.html#JSONB-SUBSCRIPTING
+postgres14|3|https://www.postgresql.org/docs/14/rangetypes.html#RANGETYPES-BUILTIN
 postgres13beta1|1|https://www.postgresql.org/about/news/2040/
 bp_policies|1|https://github.com/codenautas/backend-plus
 esta|1|https://github.com/codenautas/puntapie-inicial

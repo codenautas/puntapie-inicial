@@ -1,4 +1,17 @@
 -
+  url: postgres14
+  titulo: Salió la versión de postgres 14
+  texto: >
+    La gran novedad es la unificación de la sintaxis para acceder a elementos. 
+    Por ejemplo, antes para acceder a un elemento de un campo `jsonb` se debía usar el operador `->` así `datos_personales -> 'apellido'`.
+    Ahora eso mismo se puede escribir así: `datos_personales['apellido']` (y así con varios tipos, no solo `jsonb`).
+
+    Otra gran novedad es el nuevo tipo de datos para manejar `multiranges`.
+  fecha: 2021-09-30
+  formato: plano
+  redactor: lois
+  publicar: false
+-
   url: postgres13beta1
   titulo: Salió la versión Beta de postgres 13
   texto: >

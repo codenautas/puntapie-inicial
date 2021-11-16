@@ -25,8 +25,8 @@ export class AppPuntapieInicial extends AppBackend{
     constructor(){
         super();
     }
-    postConfig(){
-        super.postConfig();
+    async postConfig(){
+        await super.postConfig();
     }
     configStaticConfig(){
         super.configStaticConfig();
@@ -51,7 +51,7 @@ export class AppPuntapieInicial extends AppBackend{
             baseUrl='';
         }   
         mainApp.get(baseUrl+'/ejemplo_publicaciones.js',async function(req,res,_next){
-            var publicaciones = await be.inDbClient(req, async function(client){
+            var publicaciones = await be.inDbClient(req as Request, async function(client){
                 var result = await client.query(`
                     SELECT url, titulo, texto, formato, fecha, autor, 
                             ${json(`SELECT vinculo, orden FROM ejemplo_vinculos v WHERE v.url=n.url `,'orden')} as vinculos
@@ -101,13 +101,13 @@ export class AppPuntapieInicial extends AppBackend{
         ];
         return [
             /* quitar desde acá si no se usa react */
-            { type: 'js', module: 'react', modPath: 'umd', file:'react.development.js', fileProduction:'react.production.min.js' },
-            { type: 'js', module: 'react-dom', modPath: 'umd', file:'react-dom.development.js', fileProduction:'react-dom.production.min.js' },
-            { type: 'js', module: '@material-ui/core', modPath: 'umd', file:'material-ui.development.js', fileProduction:'material-ui.production.min.js' },
-            { type: 'js', module: 'material-styles', file:'material-styles.development.js', fileProduction:'material-styles.production.min.js' },
+            { type: 'js', module: 'react', modPath: 'umd', fileDevelopment:'react.development.js', file:'react.production.min.js' },
+            { type: 'js', module: 'react-dom', modPath: 'umd', fileDevelopment:'react-dom.development.js', file:'react-dom.production.min.js' },
+            { type: 'js', module: '@material-ui/core', modPath: 'umd', fileDevelopment:'material-ui.development.js', file:'material-ui.production.min.js' },
+            { type: 'js', module: 'material-styles', fileDevelopment:'material-styles.development.js', file:'material-styles.production.min.js' },
             { type: 'js', module: 'clsx', file:'clsx.min.js' },
-            { type: 'js', module: 'redux', modPath:'../dist', file:'redux.js', fileProduction:'redux.min.js' },
-            { type: 'js', module: 'react-redux', modPath:'../dist', file:'react-redux.js', fileProduction:'react-redux.min.js' },
+            { type: 'js', module: 'redux', modPath:'../dist', fileDevelopment:'redux.js', file:'redux.min.js' },
+            { type: 'js', module: 'react-redux', modPath:'../dist', fileDevelopment:'react-redux.js', file:'react-redux.min.js' },
             /* quitar hasta acá si no se usa react */
             ...super.clientIncludes(req, opts),
             /* quitar desde acá si no se usa react */
