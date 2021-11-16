@@ -42,7 +42,7 @@ Los elementos para personalizarla son:
    3. El nombre y título de la aplicación en `package.json` y el `README.MD`
    4. La gráfica en las carpetas `img` y `css` dentro de `src/unlogged` y `src/client` 
    5. Los usuarios inicials de prueba en `install/usuarios.tab`
-   6. Las tablas de ejemplo hay que quitarla y agregar las necesarias 
+   6. Las tablas de ejemplo hay que quitarlas y agregar las necesarias 
    (archivos y objetos cuyo nombre contiene la palabra `ejemplo`)
 
 ## instalarla
