@@ -8,7 +8,7 @@ import {
     List, ListItem, ListItemText, 
     SwipeableDrawer,
     Toolbar, Typography
-} from "@material-ui/core";
+} from "@mui/material";
 
 
 // @ts-ignore 
@@ -102,10 +102,10 @@ function AppPrincipalOk(props:{publicaciones:Publicacion[]}){
 
 
 class DmCaptureError extends React.Component<
-    {},
+    {children:any},
     {hasError:boolean, error:Error|{message:string}, info?:any}
 >{
-    constructor(props:any) {
+    constructor(props:{children:any}) {
         super(props);
         this.state = { hasError: false, error:{message:''} };
     }

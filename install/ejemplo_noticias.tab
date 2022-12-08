@@ -1,4 +1,15 @@
 -
+  url: postgres15
+  titulo: Salió la versión de postgres 15
+  texto: >
+    La gran novedad es la incorporación de la insrución [MERGE](https://www.postgresql.org/docs/15/sql-merge.html) para seguir conformando al estándar.
+
+    Se agrega la posibilidad de incluir rangos múltiples en `range_agg()` y varias funciones para `regexp`
+  fecha: 2022-10-13
+  formato: plano
+  redactor: lois
+  publicar: true
+-
   url: postgres14
   titulo: Salió la versión de postgres 14
   texto: >

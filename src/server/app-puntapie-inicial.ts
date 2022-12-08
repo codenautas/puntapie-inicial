@@ -94,32 +94,34 @@ export class AppPuntapieInicial extends AppBackend{
         return {menu:menuContent};
     }
     clientIncludes(req:Request|null, opts:OptsClientPage):ClientModuleDefinition[]{
+        var UsandoREact = true;
         var menuedResources:ClientModuleDefinition[]=req && opts && !opts.skipMenu ? [
             { type:'js' , src:'client.js' },
         ]:[
             {type:'js' , src:'unlogged.js' },
         ];
-        return [
-            /* quitar desde acá si no se usa react */
-            { type: 'js', module: 'react', modPath: 'umd', fileDevelopment:'react.development.js', file:'react.production.min.js' },
-            { type: 'js', module: 'react-dom', modPath: 'umd', fileDevelopment:'react-dom.development.js', file:'react-dom.production.min.js' },
-            { type: 'js', module: '@material-ui/core', modPath: 'umd', fileDevelopment:'material-ui.development.js', file:'material-ui.production.min.js' },
-            { type: 'js', module: 'material-styles', fileDevelopment:'material-styles.development.js', file:'material-styles.production.min.js' },
-            { type: 'js', module: 'clsx', file:'clsx.min.js' },
-            { type: 'js', module: 'redux', modPath:'../dist', fileDevelopment:'redux.js', file:'redux.min.js' },
-            { type: 'js', module: 'react-redux', modPath:'../dist', fileDevelopment:'react-redux.js', file:'react-redux.min.js' },
-            /* quitar hasta acá si no se usa react */
+        var list: ClientModuleDefinition[] = [
+            ...(UsandoREact?[
+                { type: 'js', module: 'react', modPath: 'umd', fileDevelopment:'react.development.js', file:'react.production.min.js' },
+                { type: 'js', module: 'react-dom', modPath: 'umd', fileDevelopment:'react-dom.development.js', file:'react-dom.production.min.js' },
+                { type: 'js', module: '@mui/material', modPath: 'umd', fileDevelopment:'material-ui.development.js', file:'material-ui.production.min.js' },
+                { type: 'js', module: 'material-styles', fileDevelopment:'material-styles.development.js', file:'material-styles.production.min.js' },
+                { type: 'js', module: 'clsx', file:'clsx.min.js' },
+                { type: 'js', module: 'redux', modPath:'../dist', fileDevelopment:'redux.js', file:'redux.min.js' },
+                { type: 'js', module: 'react-redux', modPath:'../dist', fileDevelopment:'react-redux.js', file:'react-redux.min.js' },
+            ]:[]) satisfies ClientModuleDefinition[],
             ...super.clientIncludes(req, opts),
-            /* quitar desde acá si no se usa react */
-            { type: 'js', module: 'redux-typed-reducer', modPath:'../dist', file:'redux-typed-reducer.js' },
-            { type: 'js', src: 'adapt.js' },
-            /* quitar hasta acá si no se usa react */
+            ...(UsandoREact?[
+                { type: 'js', module: 'redux-typed-reducer', modPath:'../dist', file:'redux-typed-reducer.js' },
+                { type: 'js', src: 'adapt.js' },
+            ]:[])  satisfies ClientModuleDefinition[],
             { type: 'js', src: 'ejemplo_publicaciones.js' },
             { type: 'js', src: 'pub-puntapie-inicial.js' },
             { type: 'css', file: 'pub-puntapie-inicial.css' },
             { type: 'css', file: 'menu.css' },
-             ... menuedResources
-        ];
+            ... menuedResources
+        ] satisfies ClientModuleDefinition[];
+        return list;
     }
     prepareGetTables(){
         super.prepareGetTables();
@@ -131,4 +133,3 @@ export class AppPuntapieInicial extends AppBackend{
         }
     }       
 }
-

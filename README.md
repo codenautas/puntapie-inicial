@@ -4,12 +4,14 @@ Puntapié inicial para hacer una aplicación en backend-plus desde cero
 
 # iniciar una aplicación nueva
 
+Para mantener este módulo, actualizar versiones, mantener los tipos de ts ver las [instrucciones de mantenimeiento](docs/mantenimiento.md)
+
 ## requisitos para arrancar
 
 Tener instalado:
    1. git (para windows [git-scm](https://git-scm.com/) y [TortoiseGit](https://tortoisegit.org/))
    2. [PostgreSQL](https://www.postgresql.org/) versión 12 como mínimo
-   3. [nodejs](https://nodejs.org/es/) versión 14
+   3. [nodejs](https://nodejs.org/es/) versión 14 como mínimo
    4. [Visual Studio Code](https://code.visualstudio.com/)
 
 ## arrancar con la cáscara
@@ -17,7 +19,7 @@ Tener instalado:
 Elegir un nombre para el sistema (por ejemplo "nueva app"). 
 
 Si se va a usar el git como repositorio (github, gitlab o lo que sea),
-crear el repositorio y clonarlo en una carpeta. 
+crear el repositorio y clonarlo en una carpeta. Pero no clonar puntapie-inicial. 
 Si no generar una carpeta en blanco (o del repositorio que sea).
 
 Bajar el `puntapie-inicial` (sin clonar ni hacer branch) en la carpeta del sistema nuevo. 
