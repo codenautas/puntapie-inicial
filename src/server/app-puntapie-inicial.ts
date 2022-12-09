@@ -116,8 +116,8 @@ export class AppPuntapieInicial extends AppBackend{
                 { type: 'js', src: 'adapt.js' },
             ]:[])  satisfies ClientModuleDefinition[],
             { type: 'js', src: 'ejemplo_publicaciones.js' },
-            { type: 'js', src: 'pub-puntapie-inicial.js' },
-            { type: 'css', file: 'pub-puntapie-inicial.css' },
+            { type: 'js', src: 'ejemplo-pub-puntapie-inicial.js' },
+            { type: 'css', file: 'ejemplo-pub-puntapie-inicial.css' },
             { type: 'css', file: 'menu.css' },
             ... menuedResources
         ] satisfies ClientModuleDefinition[];

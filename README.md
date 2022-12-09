@@ -41,11 +41,16 @@ Los elementos para personalizarla son:
    1. El ícono de desarrollo 🏗 que está en `.vscode/settings.json "window-title"` 
    por cualquier otro [UNICODE](amp-what.com)
    2. La licencia (la que viene predeterminada es MIT) en el `package.json`
-   3. El nombre y título de la aplicación en `package.json` y el `README.MD`
+   3. El nombre, versión y título de la aplicación en `package.json` y el `README.MD`
    4. La gráfica en las carpetas `img` y `css` dentro de `src/unlogged` y `src/client` 
    5. Los usuarios inicials de prueba en `install/usuarios.tab`
    6. Las tablas de ejemplo hay que quitarlas y agregar las necesarias 
    (archivos y objetos cuyo nombre contiene la palabra `ejemplo`)
+   7. Hay que corregir el menú
+   8. Si no habrá página deslogueado:
+      1. borrar `noLoggedUrlPath: /pub` del `local-config`
+      2. borrar la funión `addUnloggedServices`
+   9. Borrar los procedimientos y agregar los que se necesiten
 
 ## instalarla
 

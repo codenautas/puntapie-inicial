@@ -1,6 +1,6 @@
 {
   "name": "puntapie-inicial",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "license": "MIT",
   "description": "Puntapié inicial para hacer una aplicación en backend-plus desde cero",
@@ -9,7 +9,6 @@
     "dist",
     "install"
   ],
-  "keywords": ["puntapie-inicial", "puntapie-inicial-0.1.4"],
   "dependencies": {
     "@mui/material": "^5.10.17",
     "@mui/icons-material": "^5.10.16",
