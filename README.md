@@ -1,6 +1,6 @@
 # puntapie-inicial
 
-Puntapié inicial para hacer una aplicación en backend-plus desde cero
+Puntapié inicial para hacer una aplicación en backend-plus desde cero (para generar una nueva app para operativos basarse en dmencu y en la app del último operativo)
 
 # iniciar una aplicación nueva
 
