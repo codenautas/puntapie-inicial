@@ -39,7 +39,7 @@ y cambiar los parámetros necesarios (url, puertos, etc) .
 
 Los elementos para personalizarla son:
    1. El ícono de desarrollo 🏗 que está en `.vscode/settings.json "window-title"` 
-   por cualquier otro [UNICODE](amp-what.com)
+   por cualquier otro [UNICODE](http://amp-what.com)
    2. La licencia (la que viene predeterminada es MIT) en el `package.json`
    3. El nombre, versión y título de la aplicación en `package.json` y el `README.MD`
    4. La gráfica en las carpetas `img` y `css` dentro de `src/unlogged` y `src/client` 
