@@ -10,31 +10,14 @@
     "install"
   ],
   "dependencies": {
-    "@mui/material": "^5.10.17",
-    "@mui/icons-material": "^5.10.16",
-    "@mui/lab": "^5.0.0-alpha.111",
-    "backend-plus": "^1.17.13",
-    "pg-triggers": "^0.3.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-redux": "^8.0.5",
-    "redux": "^4.2.0",
-    "redux-typed-reducer": "^0.1.1"
+    "backend-plus": "^1.17.16",
+    "pg-triggers": "^0.3.2"
   },
   "devDependencies": {
-    "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.9",
-    "@types/react-redux": "^7.1.24",
-    "source-map-loader": "^4.0.1",
-    "npm-check-updates": "^16.5.1",
-    "ts-loader": "^9.4.2",
-    "typescript": "^4.9.4",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1",
-    "server4test": "^0.8.6",
-    "types.d.ts": "^0.6.7",
-    "mixin-patch": "^0.4.0",
-    "material-styles": "^0.0.7"
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.4",
+    "types.d.ts": "^0.6.13",
+    "mixin-patch": "^0.4.0"
   },
   "mixin-patch": {},
   "scripts": {
