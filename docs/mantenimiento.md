@@ -12,6 +12,13 @@ Clonar, actualizar e instalar
 ```sh
 git clone https://github.com/codenautas/puntapie-ejemplo-noticias
 cd puntapie-ejemplo-noticias
+```
+
+Sincronizar el fork.
+
+Luego
+
+``` 
 ncu -u         # hay que tener instalado en npm-update-check
 npm install
 ```

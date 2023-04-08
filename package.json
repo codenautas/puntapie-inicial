@@ -4,7 +4,7 @@
   "private": true,
   "license": "MIT",
   "description": "Puntapié inicial para hacer una aplicación en backend-plus desde cero",
-  "main": "dist/server/server-puntapie-inicial.js",
+  "main": "dist/server/server-principal.js",
   "files": [
     "dist",
     "install"
@@ -30,6 +30,6 @@
     "test": "mocha --reporter spec --bail --check-leaks test/",
     "dump": "npm start -- --dump-db",
     "dumpb": "(tsc -p tsconfig-server.json  || echo \"continue w/error\") && npm run dump",
-    "start": "node dist/server/server-puntapie-inicial.js"
+    "start": "node dist/server/server-principal.js"
   }
 }

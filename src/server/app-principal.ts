@@ -2,7 +2,7 @@
 
 import { AppBackend, Context, Request, 
     ClientModuleDefinition, OptsClientPage, MenuDefinition, MenuInfoBase
-} from "./types-puntapie-inicial";
+} from "./types-principal";
 
 import { usuarios   } from './table-usuarios';
 

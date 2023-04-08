@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch and Build Program",
             "preLaunchTask": "build-all",
-            "program": "${workspaceFolder}/dist/server/server-puntapie-inicial.js",
+            "program": "${workspaceFolder}/dist/server/server-principal.js",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]
@@ -18,7 +18,7 @@
             "type": "node",
             "request": "launch",
             "name": "Fast Launch Program",
-            "program": "${workspaceFolder}/dist/server/server-puntapie-inicial.js",
+            "program": "${workspaceFolder}/dist/server/server-principal.js",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]
@@ -28,7 +28,7 @@
             "request": "launch",
             "name": "dumpDb",
             "preLaunchTask": "build-all",
-            "program": "${workspaceFolder}/dist/server/server-puntapie-inicial.js",
+            "program": "${workspaceFolder}/dist/server/server-principal.js",
             "args": [
                 "--dump-db"
             ],

@@ -1,6 +1,6 @@
 "use strict";
 
-import {TableDefinition, TableContext} from "./types-puntapie-inicial";
+import {TableDefinition, TableContext} from "./types-principal";
 
 export function usuarios(context:TableContext):TableDefinition{
     var admin = context.user.rol==='admin';
