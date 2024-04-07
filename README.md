@@ -1,6 +1,8 @@
 # puntapie-inicial
 
-Puntapié inicial para hacer una aplicación en backend-plus desde cero
+Puntapié inicial para hacer una aplicación en backend-plus desde cero. 
+
+*Es preferible seguir las instrucciones de puntapie-ejemplo*
 
 # iniciar una aplicación nueva
 
@@ -10,20 +12,22 @@ Para mantener este módulo, actualizar versiones, mantener los tipos de ts ver l
 
 Tener instalado:
    1. git (para windows [git-scm](https://git-scm.com/) y [TortoiseGit](https://tortoisegit.org/))
-   2. [PostgreSQL](https://www.postgresql.org/) versión 12 como mínimo
-   3. [nodejs](https://nodejs.org/es/) versión 14 como mínimo
+   2. [PostgreSQL](https://www.postgresql.org/) cualquier versión LST (16 como mínimo)
+   3. [nodejs](https://nodejs.org/es/) cualquier versión LTS (20 como mínimo)
    4. [Visual Studio Code](https://code.visualstudio.com/)
 
 ## arrancar con la cáscara
 
 Elegir un nombre para el sistema (por ejemplo "nueva app"). 
 
-Si se va a usar el github como repositorio se puede hacer un fork de puntapie-inicial. 
-Si no se puede crear el repositorio de cero y copiar el contenido actual de puntapie-inicial. 
+Si se va a usar el git como repositorio (github, gitlab o lo que sea),
+crear el repositorio y clonarlo en una carpeta. Pero no clonar puntapie-inicial. 
+Si no generar una carpeta en blanco (o del repositorio que sea).
 
 Bajar el `puntapie-inicial` (sin clonar ni hacer branch) en la carpeta del sistema nuevo. 
 
 [![code download zip](code-download.png)](https://github.com/codenautas/puntapie-inicial/archive/refs/heads/master.zip)
+
 
 Cambiar todas las ocurrencias de puntapie inicial por nueva app, 
 respetando los guiones y rayas (- ó _) y las mayúsculas y minúsculas
@@ -42,11 +46,13 @@ Los elementos para personalizarla son:
    3. El nombre, versión y título de la aplicación en `package.json` y el `README.MD`
    4. La gráfica en las carpetas `img` y `css` dentro de `src/unlogged` y `src/client` 
    5. Los usuarios inicials de prueba en `install/usuarios.tab`
-   7. Hay que agregar las opciones al menú
-   8. Si habrá página deslogueado (ver ejemplo):
-      1. agregar `noLoggedUrlPath: /pub` en el `def-config` 
-      2. agregar la funión `addUnloggedServices`
-   9. Agregar los procedimientos que se necesiten
+   6. Partiendo de puntapie-ejemplo hay que borrar las tablas de ejemplo (archivos y objetos cuyo nombre contiene la palabra `ejemplo`).
+   Agregar las tablas necesarias del sistema en `src` prefijándolas con `table-`. 
+   7. Hay que corregir el menú
+   8. Si no habrá página deslogueado:
+      1. borrar `noLoggedUrlPath: /pub` del `local-config`
+      2. borrar la funión `addUnloggedServices`
+   9. Borrar los procedimientos de ejemplo y agregar los que se necesiten.
 
 ## instalarla
 
@@ -63,12 +69,15 @@ npm start
 En el navegador ir a `localhost:3000/nueva_app` (o como se llame la aplicación). O a `localhost:3000/nueva_app/admin` 
 para administrarla. 
 
-Una manera simple (y peligrosa) para correr todo (que borra la base de datos cada vez) es:
-`rem call npm run prepare && call npm start -- --dump-db && call run-sql create-schema && call npm start`
+## ejemplo
 
-## repositorio de ejemplo
+Al instalar se puede ver una aplicación de ejemplo que muestra noticias (con título, fecha, autor y uno o más vínculos),
+tiene dos tipos de usuarios, el administrador y los redactores. El administrador puede hacer lo que quiera con los datos.
+Los redactores pueden agregar y modificar noticias, y publicarlas. 
+No pueden ver las noticias de otros redactores hasta que no estén publicadas. 
 
-Se puede ver un ejemplo en [puntapie-ejemplo-noticias](https://github.com/codenautas/puntapie-ejemplo-noticias). 
+Las tablas y procedimientos de ejemplo hay que borrarlo para empezar con la aplicación limpia. 
+Simplemente hay que buscar la palabra ejemplo en el código fuente (y en los nombres de los archivos) para elimianarlo. 
 
 ### remplazos
 

@@ -1,6 +1,6 @@
 {
   "name": "puntapie-inicial",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": true,
   "license": "MIT",
   "description": "Puntapié inicial para hacer una aplicación en backend-plus desde cero",
@@ -10,14 +10,14 @@
     "install"
   ],
   "dependencies": {
-    "backend-plus": "^1.17.17",
+    "backend-plus": "^1.19.7",
     "pg-triggers": "^0.3.2"
   },
   "devDependencies": {
-    "@types/node": "^18.15.11",
-    "typescript": "^5.0.4",
-    "types.d.ts": "^0.6.13",
-    "mixin-patch": "^0.4.0"
+    "@types/node": "^20.12.5",
+    "typescript": "^5.4.4",
+    "types.d.ts": "^0.6.21",
+    "mixin-patch": "^0.4.1"
   },
   "mixin-patch": {},
   "scripts": {

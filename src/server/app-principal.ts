@@ -12,11 +12,11 @@ export class AppPuntapieInicial extends AppBackend{
     constructor(){
         super();
     }
-    configStaticConfig(){
+    override configStaticConfig(){
         super.configStaticConfig();
         this.setStaticConfig(staticConfigYaml);
     }
-    getMenu(context:Context):MenuDefinition{
+    override getMenu(context:Context):MenuDefinition{
         var menuContent:MenuInfoBase[]=[];
         if(context.user && context.user.rol=="admin"){
             menuContent.push(
@@ -27,7 +27,7 @@ export class AppPuntapieInicial extends AppBackend{
         };
         return {menu:menuContent};
     }
-    clientIncludes(req:Request|null, opts:OptsClientPage):ClientModuleDefinition[]{
+    override clientIncludes(req:Request|null, opts:OptsClientPage):ClientModuleDefinition[]{
         var UsandoREact = false;
         var menuedResources:ClientModuleDefinition[]=req && opts && !opts.skipMenu ? [
             { type:'js' , src:'client.js' },
@@ -53,7 +53,7 @@ export class AppPuntapieInicial extends AppBackend{
         ] satisfies ClientModuleDefinition[];
         return list;
     }
-    prepareGetTables(){
+    override prepareGetTables(){
         super.prepareGetTables();
         this.getTableDefinition={
             ... this.getTableDefinition,
