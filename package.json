@@ -1,16 +1,17 @@
 {
   "name": "puntapie-inicial",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "private": true,
   "license": "MIT",
   "description": "Puntapié inicial para hacer una aplicación en backend-plus desde cero",
   "main": "dist/server/server-principal.js",
+  "types": "dist/server/server-principal.d.ts",
   "files": [
     "dist",
     "install"
   ],
   "dependencies": {
-    "backend-plus": "^1.19.7",
+    "backend-plus": "^2.0.0-rc.11",
     "pg-triggers": "^0.3.2"
   },
   "devDependencies": {
