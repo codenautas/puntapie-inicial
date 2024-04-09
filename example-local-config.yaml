@@ -11,6 +11,7 @@ db:
   password: cambiar_esta_clave
 install:
   dump:
+    drop-his: false
     db:
       owner: puntapie_inicial_owner
 client-setup: 
