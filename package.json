@@ -11,12 +11,12 @@
     "install"
   ],
   "dependencies": {
-    "backend-plus": "^2.0.0-rc.13",
-    "pg-triggers": "^0.3.2"
+    "backend-plus": "^2.0.0-rc.16",
+    "pg-triggers": "^0.3.3"
   },
   "devDependencies": {
-    "@types/node": "^20.12.6",
-    "typescript": "^5.4.4",
+    "@types/node": "^20.13.0",
+    "typescript": "^5.4.5",
     "types.d.ts": "^0.6.21",
     "mixin-patch": "^0.4.1"
   },
