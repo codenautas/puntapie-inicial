@@ -31,9 +31,9 @@ install:
     db:
       owner: puntapie_inicial_owner
     scripts:
-      post-adapt:
-      - ../node_modules/pg-triggers/lib/recreate-his.sql
+      pre-adapt:
       - ../node_modules/pg-triggers/lib/table-changes.sql
+      post-adapt:
       - ../node_modules/pg-triggers/lib/function-changes-trg.sql
       - ../node_modules/pg-triggers/lib/enance.sql    
 logo: 
