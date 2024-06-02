@@ -26,8 +26,29 @@ Si no generar una carpeta en blanco (o del repositorio que sea).
 
 Bajar el `puntapie-inicial` (sin clonar ni hacer branch) en la carpeta del sistema nuevo. 
 
-[![code download zip](code-download.png)](https://github.com/codenautas/puntapie-inicial/archive/refs/heads/master.zip)
+```sh
+cd nueva-app
+git clone --bare https://github.com/codenautas/puntapie-inicial.git
+cd puntapie-inicial.git
+git push --mirror https://github.com/EL-OWNER-U-ORGANIZACION/nueva-app.git
+cd ..
+del puntapie-inicial.git /s
+git clone https://github.com/EL-OWNER-U-ORGANIZACION/nueva-app.git .
+git remote add upstream https://github.com/codenautas/puntapie-inicial.git
+git remote -v
+```
+_Más info sobre `--bare` en [github docs](https://docs.github.com/es/repositories/creating-and-managing-repositories/duplicating-a-repository)_
 
+En este punto se tiene un repo igual a _puntapie-inicial_. 
+
+En ese momento hay dos alternativas, empezar a trabajar desde acá con la app vacía,
+o bajarse el _puntapie-ejemplo_ que tiene algunas tablas y procedimientos. 
+
+En ese segundo caso hay que bajarse el [![el zip del repo putapie-ejemplo](code-download.png)](https://github.com/codenautas/puntapie-ejemplo/archive/refs/heads/master.zip)
+
+Y pisar todos los archivos que tiene la carpeta nueva-app.
+
+En ambos casos:
 
 Cambiar todas las ocurrencias de puntapie inicial por nueva app, 
 respetando los guiones y rayas (- ó _) y las mayúsculas y minúsculas
@@ -36,6 +57,9 @@ Eso debe hacerse tanto dentro de los archivos como en los nombres de los mismos.
 
 Copiar el archivo `example-local-config.yaml` en `local-config.yaml` 
 y cambiar los parámetros necesarios (url, puertos, etc) .
+
+En el caso de usar _puntapié ejemplo_ hay que buscar y cambiar a mano
+todos los archivos o código que tenga la palabra ejemplo y borrar lo que no se necesite por ahora. 
 
 ## personalizarla
 
@@ -90,8 +114,24 @@ Puntapié Inicial es un proyecto que muestra cómo arrancar una aplicación back
 A veces puede cambiar algo en el "boilerplate" o en las inclusiones recomendadas. 
 Para eso hay que sincronizar con puntapie-inicial. 
 
+**No hacer esto si hay trabajo sin comitear**
+
 Las instrucciones para sincronizar con un fork cualquiera pueden verse en:
    * https://www.atlassian.com/git/tutorials/git-forks-and-upstreams
+
+```sh
+cd nueva-app
+git remote add upstream https://github.com/codenautas/puntapie-inicial.git
+git remote -v
+git fetch upstream
+git chekcout master
+git merge upstream/main
+```
+
+Si da conflictos lo primero que hay que hacer es resolverlos y comitear. 
+
+Luego revisar si los cambios son apropiados, si no revertirlos introduciendo el cambio contrario. 
+
 
 ## documentación
 
