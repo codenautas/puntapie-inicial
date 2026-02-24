@@ -17,7 +17,8 @@ install:
 client-setup: 
   lang: es
 devel:
-  delay: 0
+  delay: 0 # 500 recomended for development
+  useFileDevelopment: false # true when development
 log:
   db:
     on-demand: true
